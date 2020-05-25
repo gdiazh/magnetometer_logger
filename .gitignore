@@ -1,0 +1,7 @@
+sw_interface/data/
+sw_interface/data_alumnos/
+sw_interface/data_old/
+sw_interface/osc/
+*.zip
+*.pyc
+*~
