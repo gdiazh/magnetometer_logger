@@ -82,11 +82,13 @@ if __name__ == '__main__':
     date = datetime.datetime.now().strftime('%Y-%m-%d %H-%M-%S')
     print("Create folder: ", date)
     rospy.init_node('ros_bt_interface')
-    distance = raw_input("distance: ")
+    # distance = raw_input("distance: ")
+    duty = raw_input("duty: ")
     date_usr = raw_input("date-folder: ")
 
     folder = "data/magnetometer/"+str(date_usr)
-    file_name = "/-test_distances[magField]["+str(distance)+"mm]"
+    # file_name = "/-test_distances[magField]["+str(distance)+"mm]"
+    file_name = "/-test_distances[magField]["+str(duty)+"%]"
 
     rwbt = DataInterface(file_name, folder)
     rwbt.initialize()

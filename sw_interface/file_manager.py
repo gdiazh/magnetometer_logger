@@ -35,9 +35,10 @@ class fileManager(object):
 
     def to_file(self, data, sz):
         self.data_file = open(self.full_name, "ab+")
-        for i in range(0,sz):
+        for i in range(0,sz-1):
             self.data_file.write(str(data[i]))
             self.data_file.write(",")
+        self.data_file.write(str(data[sz-1]))
         self.data_file.write("\n")
         self.data_file.close()
 
